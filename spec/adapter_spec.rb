@@ -1,17 +1,10 @@
-require 'spec_helper'
-
-require 'dm-core/spec/shared/adapter_spec'
+require 'dm-postgres-adapter/spec/setup'
 require 'dm-do-adapter/spec/shared_spec'
 
-require 'dm-migrations'
-require 'dm-postgres-adapter/spec/setup'
-
-ENV['ADAPTER']          = 'postgres'
-ENV['ADAPTER_SUPPORTS'] = 'all'
-
 describe 'DataMapper::Adapters::PostgresAdapter' do
-
+  
   before :all do
+    # TODO can we move this back to the data objects gem?
     @adapter    = DataMapper::Spec.adapter
     @repository = DataMapper.repository(@adapter.name)
   end

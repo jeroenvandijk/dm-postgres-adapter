@@ -1,5 +1,5 @@
 require 'dm-postgres-adapter'
-require 'dm-core/spec/setup'
+require 'dm-core/spec/spec_helper'
 
 module DataMapper
   module Spec
