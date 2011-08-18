@@ -5,6 +5,7 @@ module DataMapper
   module Adapters
 
     class PostgresAdapter < DataObjectsAdapter
+      capabilities :all => :true, :migrations => true, :join => true
 
       module SQL #:nodoc:
         private
